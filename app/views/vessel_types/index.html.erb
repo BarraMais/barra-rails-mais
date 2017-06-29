@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Vessel Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vessel_types.each do |vessel_type| %>
+      <tr>
+        <td><%= vessel_type.name %></td>
+        <td><%= link_to 'Show', vessel_type %></td>
+        <td><%= link_to 'Edit', edit_vessel_type_path(vessel_type) %></td>
+        <td><%= link_to 'Destroy', vessel_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vessel Type', new_vessel_type_path %>

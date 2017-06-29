@@ -1,0 +1,17 @@
+<%= form_for(own_vessel) do |f| %>
+  <% if own_vessel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(own_vessel.errors.count, "error") %> prohibited this own_vessel from being saved:</h2>
+
+      <ul>
+      <% own_vessel.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

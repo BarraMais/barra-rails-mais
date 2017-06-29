@@ -1,0 +1,82 @@
+<%= form_for(user) do |f| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cellphone %>
+    <%= f.text_field :cellphone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :birthday %>
+    <%= f.date_select :birthday %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sex %>
+    <%= f.text_field :sex %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nautical_professional %>
+    <%= f.number_field :nautical_professional %>
+  </div>
+
+  <div class="field">
+    <%= f.label :academic_profile %>
+    <%= f.text_area :academic_profile %>
+  </div>
+
+  <div class="field">
+    <%= f.label :relationship %>
+    <%= f.number_field :relationship %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :about %>
+    <%= f.text_area :about %>
+  </div>
+
+  <div class="field">
+    <%= f.label :has_embarcation %>
+    <%= f.number_field :has_embarcation %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nautical_work %>
+    <%= f.text_area :nautical_work %>
+  </div>
+
+  <div class="field">
+    <%= f.label :naval_service %>
+    <%= f.text_area :naval_service %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+default: &default
+  adapter: redis
+  url: redis://127.0.0.1:6379/1
+  # url: redis://redis:6379
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  adapter: redis
+  url: redis://redistogo:83c5b1538666900ea4d9ccdf6030108e@koi.redistogo.com:11772/

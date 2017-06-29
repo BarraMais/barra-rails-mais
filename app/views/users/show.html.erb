@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <strong>Cellphone:</strong>
+  <%= @user.cellphone %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @user.birthday %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @user.sex %>
+</p>
+
+<p>
+  <strong>Nautical professional:</strong>
+  <%= @user.nautical_professional %>
+</p>
+
+<p>
+  <strong>Academic profile:</strong>
+  <%= @user.academic_profile %>
+</p>
+
+<p>
+  <strong>Relationship:</strong>
+  <%= @user.relationship %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @user.user %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @user.about %>
+</p>
+
+<p>
+  <strong>Has embarcation:</strong>
+  <%= @user.has_embarcation %>
+</p>
+
+<p>
+  <strong>Nautical work:</strong>
+  <%= @user.nautical_work %>
+</p>
+
+<p>
+  <strong>Naval service:</strong>
+  <%= @user.naval_service %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

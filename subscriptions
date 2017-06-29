@@ -1,0 +1,56 @@
+                List of relations
+ Schema |          Name          | Type  | Owner  
+--------+------------------------+-------+--------
+ public | accessories            | table | vortex
+ public | ad_interests           | table | vortex
+ public | addresses              | table | vortex
+ public | ads                    | table | vortex
+ public | advertisers            | table | vortex
+ public | album_photos           | table | vortex
+ public | ar_internal_metadata   | table | vortex
+ public | areas                  | table | vortex
+ public | brands                 | table | vortex
+ public | cities                 | table | vortex
+ public | classifieds            | table | vortex
+ public | comments               | table | vortex
+ public | conversations          | table | vortex
+ public | countries              | table | vortex
+ public | country_for_travels    | table | vortex
+ public | event_guests           | table | vortex
+ public | events                 | table | vortex
+ public | fishing_categories     | table | vortex
+ public | fishing_sub_categories | table | vortex
+ public | fishings               | table | vortex
+ public | friendships            | table | vortex
+ public | group_members          | table | vortex
+ public | groups                 | table | vortex
+ public | interest_areas         | table | vortex
+ public | interests              | table | vortex
+ public | messages               | table | vortex
+ public | model_names            | table | vortex
+ public | molds                  | table | vortex
+ public | nautical_sports        | table | vortex
+ public | notifications          | table | vortex
+ public | own_vessels            | table | vortex
+ public | plans                  | table | vortex
+ public | post_images            | table | vortex
+ public | posts                  | table | vortex
+ public | product_categories     | table | vortex
+ public | product_sub_categories | table | vortex
+ public | products               | table | vortex
+ public | schema_migrations      | table | vortex
+ public | state_for_travels      | table | vortex
+ public | states                 | table | vortex
+ public | subscriptions          | table | vortex
+ public | transactions           | table | vortex
+ public | traveled_countries     | table | vortex
+ public | traveled_states        | table | vortex
+ public | user_interests         | table | vortex
+ public | user_nautical_sports   | table | vortex
+ public | users                  | table | vortex
+ public | vessel_accessories     | table | vortex
+ public | vessel_types           | table | vortex
+ public | vessels                | table | vortex
+ public | votes                  | table | vortex
+(51 rows)
+
