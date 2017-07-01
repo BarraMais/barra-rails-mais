@@ -31,6 +31,7 @@ class User < ApplicationRecord
   has_many :traveled_countries, dependent: :destroy
   has_many :country_for_travels, :through => :traveled_countries, dependent: :destroy
   has_many :album_photos, dependent: :destroy
+  has_many :albums, dependent: :destroy
   has_many :user_interests, dependent: :destroy
   has_many :interests, :through => :user_interests, dependent: :destroy
 

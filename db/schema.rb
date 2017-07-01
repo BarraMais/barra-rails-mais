@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170509145040) do
+ActiveRecord::Schema.define(version: 20170630201624) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -94,6 +94,14 @@ ActiveRecord::Schema.define(version: 20170509145040) do
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
     t.index ["user_id"], name: "index_album_photos_on_user_id", using: :btree
+  end
+
+  create_table "albums", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_albums_on_user_id", using: :btree
   end
 
   create_table "areas", force: :cascade do |t|
@@ -354,6 +362,18 @@ ActiveRecord::Schema.define(version: 20170509145040) do
     t.index ["user_id", "vessel_type_id"], name: "index_own_vessels_on_user_id_and_vessel_type_id", unique: true, using: :btree
     t.index ["user_id"], name: "index_own_vessels_on_user_id", using: :btree
     t.index ["vessel_type_id"], name: "index_own_vessels_on_vessel_type_id", using: :btree
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.boolean  "photo_album_cover",  default: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.integer  "album_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.index ["album_id"], name: "index_photos_on_album_id", using: :btree
   end
 
   create_table "plans", force: :cascade do |t|
@@ -648,6 +668,7 @@ ActiveRecord::Schema.define(version: 20170509145040) do
   add_foreign_key "advertisers", "addresses"
   add_foreign_key "advertisers", "users"
   add_foreign_key "album_photos", "users"
+  add_foreign_key "albums", "users"
   add_foreign_key "areas", "ads"
   add_foreign_key "brands", "vessel_types"
   add_foreign_key "cities", "states"
@@ -670,6 +691,7 @@ ActiveRecord::Schema.define(version: 20170509145040) do
   add_foreign_key "molds", "brands"
   add_foreign_key "own_vessels", "users"
   add_foreign_key "own_vessels", "vessel_types"
+  add_foreign_key "photos", "albums"
   add_foreign_key "post_images", "posts"
   add_foreign_key "posts", "users"
   add_foreign_key "product_sub_categories", "product_categories"

@@ -199,6 +199,18 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :albums do
+    collection do
+      get 'get_user_album/:id' => 'albums#get_user_album'
+    end
+  end
+
+  resources :photos do
+    collection do
+      get 'get_album_photo/:id' => 'photos#get_album_photo'
+    end
+  end
+
   get 'search/look_for'
   get 'devise_token' => 'application#devise_token'
 

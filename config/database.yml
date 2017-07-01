@@ -24,15 +24,16 @@ default: &default
 local: &local
 
   # username: arthur
-  username: vortex
+  #username: vortex
+  username: postgres
 
 development:
   <<: *default
-  # database: barramais_development
-  # <<: *local
-  database: barramais
-  username: postgres
-  password: postgres
+  database: barramais_development
+  <<: *local
+  #database: barramais
+  #username: postgres
+  #password: postgres
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
