@@ -1,6 +1,13 @@
 class AlbumsController < ApplicationController
 	before_action :authenticate_user!, only: [:create]
 
+	def new
+	    @album = Album.new
+	end
+
+	def edit
+  	end
+
 	# GET with conditional
 	def get_user_album
 		@albums = Album.where(user_id: params[:id])
@@ -24,5 +31,17 @@ class AlbumsController < ApplicationController
 	    #     format.json { render json: @album_photo.errors, status: :unprocessable_entity }
 	    #   end
 	    # end
+	end
+
+	def update
+		respond_to do |format|
+			if @album.update(album_params)
+				format.html { redirect_to @album, notice: 'Album photo was successfully updated.' }
+				format.json { render :show, status: :ok, location: @album }
+			else
+				format.html { render :edit }
+				format.json { render json: @album.errors, status: :unprocessable_entity }
+			end
+		end
 	end
 end
