@@ -26,10 +26,12 @@ local: &local
   # username: arthur
   #username: vortex
   username: postgres
+  password: postgres
 
 development:
   <<: *default
-  database: barramais_development
+  #database: barramais_development
+  database: barra-mais
   <<: *local
   #database: barramais
   #username: postgres

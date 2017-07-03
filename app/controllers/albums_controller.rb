@@ -16,21 +16,17 @@ class AlbumsController < ApplicationController
 	def create
 	    @album = Album.new
 	    @album.user = current_user
-	    image = Paperclip.io_adapters.for(photo_params[:image])
-	    image.original_filename = "#{photo_params[:filename]}"
-	    image.photo_album_cover = true
+	    #image = Paperclip.io_adapters.for(album_params[:image])
+	    #image.original_filename = "#{photo_params[:filename]}"
+	    #image.photo_album_cover = true
 	    #@album.photo = image
-	    @album.save
-	    @album.save_photo_cover(image)
-	    # respond_to do |format|
-	    #   if @album_photo.save
-	    #     format.html { redirect_to @album_photo, notice: 'Album photo was successfully created.' }
-	    #     format.json { render json: @album_photo }
-	    #   else
-	    #     format.html { render :new }
-	    #     format.json { render json: @album_photo.errors, status: :unprocessable_entity }
-	    #   end
-	    # end
+	    #@album.save
+	    respond_to do |format|
+        if @album.save
+            @album.photos.create(album_params[:photos_attributes])
+        end
+      end
+	    #@album.save_photo_cover(image)
 	end
 
 	def update
@@ -44,4 +40,13 @@ class AlbumsController < ApplicationController
 			end
 		end
 	end
+
+	private
+
+    def album_params
+      params.require(:album).permit(
+        :title,
+        photos_attributes: [:image]
+      )
+    end
 end
