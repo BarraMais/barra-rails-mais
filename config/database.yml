@@ -29,11 +29,11 @@ local: &local
 
 development:
   <<: *default
-  database: barramais_development
+  #database: barramais_development
   <<: *local
-  #database: barramais
+  database: barra-mais
   #username: postgres
-  #password: postgres
+  password: postgres
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
