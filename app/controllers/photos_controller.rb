@@ -1,18 +1,38 @@
 class PhotosController < ApplicationController
+	before_action :set_photo, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user!, only: [:create]
+	# GET /photos
+	# GET /photos.json
+	def index
+	@photos = Photo.all
+	end
 
+	# GET /photos/1
+	# GET /photos/1.json
+	def show
+	end
+
+	# GET /photos/new
+	def new
+	@photo = Photo.new
+	end
+
+	# GET /photos/1/edit
+	def edit
+	end
 	# GET with conditional
 	def get_album_photo
 		@photos = Photo.where(album_id: params[:id])
 	end
 
 	def create
-
-	    @photo = Photo.new
-	    @photo.album = params['album_id']
-	    image = Paperclip.io_adapters.for(image_params[:image])
-	    image.original_filename = "#{image_params[:filename]}"
-	    @photo.image = image
-	    @photo.save
+		params[:photo][:image].each do |im|
+	  		@photo = Photo.new
+			img = Paperclip.io_adapters.for(photo_params[:image])
+			img.original_filename = "#{photo_params[:original_filename]}"
+			@photo.image = im
+			@photo.save
+	    end
 	    # respond_to do |format|
 	    #   if @album_photo.save
 	    #     format.html { redirect_to @album_photo, notice: 'Album photo was successfully created.' }
@@ -24,4 +44,38 @@ class PhotosController < ApplicationController
 	    # end
 	end
 
+	def update
+		respond_to do |format|
+			if @photo.update(photo_params)
+				format.html { redirect_to @photo, notice: 'Photo was successfully updated.' }
+				format.json { render :show, status: :ok, location: @photo }
+			else
+				format.html { render :edit }
+				format.json { render json: @photo.errors, status: :unprocessable_entity }
+			end
+		end
+	end
+
+	# DELETE /photos/1
+	# DELETE /photos/1.json
+	def destroy
+		@photo.destroy
+			respond_to do |format|
+			format.html { redirect_to photos_url, notice: 'Photo was successfully destroyed.' }
+			format.json { head :no_content }
+		end
+	end
+
+  	private
+	    # Use callbacks to share common setup or constraints between actions.
+	    def set_photo
+	      @photo = Photo.find(params[:id])
+	    end
+
+		def photo_params
+	      params.require(:photo).permit(
+	        :image,
+	        :filename
+	      )
+	    end
 end
