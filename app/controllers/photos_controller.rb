@@ -6,6 +6,7 @@ class PhotosController < ApplicationController
 	end
 
 	def create
+
 	    @photo = Photo.new
 	    @photo.album = params['album_id']
 	    image = Paperclip.io_adapters.for(image_params[:image])
