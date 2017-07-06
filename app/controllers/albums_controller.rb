@@ -88,6 +88,7 @@ class AlbumsController < ApplicationController
 	    def set_album
 	      @album = Album.find(params[:id])
 	    end
+	    
 		def album_params
 	      params.require(:album).permit(
 	        :title,
