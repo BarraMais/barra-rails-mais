@@ -36,8 +36,11 @@ class AlbumsController < ApplicationController
 	    status_album = false
 	    photo_capa = false
 	    photo_message = ''
+	    album_id = ''
+	    photo = ''
 	    
 	    if @album.save
+	    	album_id = @album.id
 	    	status_album = true
 	    	if img
                 @photo = Photo.new
@@ -47,6 +50,7 @@ class AlbumsController < ApplicationController
                 if @photo.save
                   puts "ok salvo"
                   photo_capa = true
+                  photo = @photo
                 else
                   puts "erro"
                   photo_message = 'erro na hora de salvar a photo'
@@ -54,7 +58,7 @@ class AlbumsController < ApplicationController
             end
 	    end
 	    status = 'fim'
-	    dados << {:status => status, :album => status_album, :photo_capa => photo_capa, :photo_message => photo_message}
+	    dados << {:status => status, :album => status_album, :album_id => album_id,:photo_cover => photo_capa, :photo_message => photo_message, :photo => photo}
 	    render :json => dados
 	    # respond_to do |format|
 	    #   if @album_photo.save
