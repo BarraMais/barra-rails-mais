@@ -30,6 +30,10 @@ class AlbumsController < ApplicationController
 	    alb = params['album']
       	img = alb['image']
 	    #@album.photo = image
+
+	    dados = []
+
+	    dados << {:status => 'inicial', :album => false, :photo_capa => false}
 	    if @album.save
 	    	if img
                 @photo = Photo.new
@@ -43,6 +47,7 @@ class AlbumsController < ApplicationController
                 end
               end
 	    end
+	    render :json => dados
 	    # respond_to do |format|
 	    #   if @album_photo.save
 	    #     format.html { redirect_to @album_photo, notice: 'Album photo was successfully created.' }

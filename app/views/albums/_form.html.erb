@@ -16,11 +16,16 @@
     <%= f.text_field :title %>
   </div>
 
-  <div class="field">
+  <!--div class="field">
     <%= f.fields_for @album.photos do |builder| %>
         <%= f.label :photos, :class => 'control-label' %>
         <%= builder.file_field "image", type: :file, multiple: true %>
     <% end %>
+  </div-->
+
+  <div class="field">
+    <%= f.label :photos, :class => 'control-label' %>
+    <%= f.file_field "image" %>
   </div>
 
   <div class="actions">
