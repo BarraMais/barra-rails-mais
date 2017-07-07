@@ -95,7 +95,7 @@ class PhotosController < ApplicationController
 		def photo_params
 	      params.require(:photo).permit(
 	        :image,
-	        :filename
+	        :filename,
 	        :album_id
 	      )
 	    end
