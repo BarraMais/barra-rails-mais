@@ -26,13 +26,29 @@ class PhotosController < ApplicationController
 	end
 
 	def create
+
+		dados = []
+	    status = 'inicio'
+	    count_image_save = 0
+	    count_image_not_save = 0
+	    album_id = ''
+
 		params[:photo][:image].each do |im|
 	  		@photo = Photo.new
 			img = Paperclip.io_adapters.for(photo_params[:image])
 			img.original_filename = "#{photo_params[:original_filename]}"
 			@photo.image = im
-			@photo.save
+			if @photo.save
+				count_image_save++
+			else
+				count_image_not_save++
+			end
 	    end
+
+	    status = 'fim'
+	    dados << {:status => status, :count_image_save => count_image_save, :count_image_not_save => count_image_not_save,:album_id => album_id}
+	    render :json => dados
+
 	    # respond_to do |format|
 	    #   if @album_photo.save
 	    #     format.html { redirect_to @album_photo, notice: 'Album photo was successfully created.' }

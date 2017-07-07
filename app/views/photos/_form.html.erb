@@ -11,6 +11,20 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :image , "image"%>
+    <%= f.file_field :image, :multiple =>:true %>  </br>
+  </div>
+
+  <div class="field">
+    <%= f.label :image , "image"%>
+    <%= f.file_field :image, :multiple =>:true %>  </br>
+  </div>
+
+  <div class="field">
+    <%= f.hidden_field :album_id, :value => '1' %>  </br>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
