@@ -38,7 +38,7 @@ class AlbumsController < ApplicationController
 	    photo_message = ''
 	    album_id = ''
 	    photo = ''
-	    
+
 	    if @album.save
 	    	album_id = @album.id
 	    	status_album = true
@@ -83,12 +83,22 @@ class AlbumsController < ApplicationController
 		end
 	end
 
+	# DELETE /album_photos/1
+	# DELETE /album_photos/1.json
+	def destroy
+		@album_photo.destroy
+		respond_to do |format|
+			format.html { redirect_to album_photos_url, notice: 'Album photo was successfully destroyed.' }
+			format.json { head :no_content }
+		end
+	end
+
 	private
     	# Use callbacks to share common setup or constraints between actions.
 	    def set_album
 	      @album = Album.find(params[:id])
 	    end
-	    
+
 		def album_params
 	      params.require(:album).permit(
 	        :title,
