@@ -46,6 +46,7 @@ class PhotosController < ApplicationController
 	    end
 
 	    status = 'fim'
+
 	    dados << {:status => status, :count_image_save => count_image_save, :count_image_not_save => count_image_not_save,:album_id => album_id}
 	    render :json => dados
 
