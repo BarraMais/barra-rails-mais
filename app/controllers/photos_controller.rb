@@ -34,10 +34,13 @@ class PhotosController < ApplicationController
 	    album_id = ''
 
 		params[:photo][:image].each do |im|
+
 	  		@photo = Photo.new
 			img = Paperclip.io_adapters.for(photo_params[:image])
 			img.original_filename = "#{photo_params[:original_filename]}"
 			@photo.image = im
+			@photo.album_id = photo_params[:album_id]
+			album_id = photo_params[:album_id]
 			if @photo.save
 				count_image_save += 1
 			else
