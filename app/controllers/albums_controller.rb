@@ -83,12 +83,12 @@ class AlbumsController < ApplicationController
 		end
 	end
 
-	# DELETE /album_photos/1
-	# DELETE /album_photos/1.json
+	# DELETE /albums/1
+	# DELETE /albums/1.json
 	def destroy
-		@album_photo.destroy
+		@album.destroy
 		respond_to do |format|
-			format.html { redirect_to album_photos_url, notice: 'Album photo was successfully destroyed.' }
+			format.html { redirect_to albums_url, notice: 'Album was successfully destroyed.' }
 			format.json { head :no_content }
 		end
 	end
