@@ -28,17 +28,19 @@ class PhotosController < ApplicationController
 	def create
 
 		dados = []
-	    status = 'inicio'
-	    count_image_save = 0
-	    count_image_not_save = 0
-	    album_id = ''
+		status = 'inicio'
+		count_image_save = 0
+		count_image_not_save = 0
+		album_id = ''
 
-		params[:photo][:image].each do |im|
-
-	  		@photo = Photo.new
+	    params[:photo][:image].each do |im|
+	    	puts "$"*100
+	    	puts im.original_filename
+	    	puts "$"*100
+			@photo = Photo.new
 			img = Paperclip.io_adapters.for(photo_params[:image])
 			img.original_filename = "#{photo_params[:original_filename]}"
-			@photo.image = im
+			@photo.image = img
 			@photo.album_id = photo_params[:album_id]
 			album_id = photo_params[:album_id]
 			if @photo.save
@@ -48,10 +50,10 @@ class PhotosController < ApplicationController
 			end
 	    end
 
-	    status = 'fim'
+		status = 'fim'
 
-	    dados << {:status => status, :count_image_save => count_image_save, :count_image_not_save => count_image_not_save,:album_id => album_id}
-	    render :json => dados
+		dados << {:status => status, :count_image_save => count_image_save, :count_image_not_save => count_image_not_save,:album_id => album_id}
+		render :json => dados
 
 	    # respond_to do |format|
 	    #   if @album_photo.save
@@ -96,7 +98,7 @@ class PhotosController < ApplicationController
 	      params.require(:photo).permit(
 	        :image,
 	        :filename,
-	        :album_id
+        	:album_id
 	      )
 	    end
 end
