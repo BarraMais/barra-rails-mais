@@ -24,11 +24,14 @@ class AlbumsController < ApplicationController
 	end
 
 	def create
-	    @album = Album.new(album_params)
-	    @album.user = current_user
+	    @album = Album.new
 
+	    @album.user = current_user
+	    @album.title = album_params[:title]
 	    alb = params['album']
-      	img = alb['image']
+      	#img = alb['image']
+      	img = Paperclip.io_adapters.for(album_params[:image])
+		img.original_filename = "#{album_params[:original_filename]}"
 	    #@album.photo = image
 
 	    dados = []
@@ -102,6 +105,8 @@ class AlbumsController < ApplicationController
 		def album_params
 	      params.require(:album).permit(
 	        :title,
+	        :image,
+	        :filename
 	      )
 	    end
 end
