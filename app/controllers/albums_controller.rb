@@ -24,7 +24,7 @@ class AlbumsController < ApplicationController
 	end
 
 	def create
-	    @album = Album.new
+	    @album = Album.new(album_params)
 	    @album.user = current_user
 
 	    alb = params['album']
