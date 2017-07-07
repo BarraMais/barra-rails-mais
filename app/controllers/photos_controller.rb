@@ -39,9 +39,9 @@ class PhotosController < ApplicationController
 			img.original_filename = "#{photo_params[:original_filename]}"
 			@photo.image = im
 			if @photo.save
-				count_image_save++
+				count_image_save += 1
 			else
-				count_image_not_save++
+				count_image_save += 1
 			end
 	    end
 
