@@ -96,6 +96,7 @@ class PhotosController < ApplicationController
 	      params.require(:photo).permit(
 	        :image,
 	        :filename
+	        :album_id
 	      )
 	    end
 end
