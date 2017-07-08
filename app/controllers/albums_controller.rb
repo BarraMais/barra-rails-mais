@@ -20,7 +20,10 @@ class AlbumsController < ApplicationController
 
 	# GET with conditional
 	def get_user_album
-		@albums = Album.where(user_id: params[:id])
+		#@albums = Album.where(user_id: params[:id])
+		@photos = Photo.select("albums.*, photos.*")
+		.joins("left join albums on albums.id = photos.album_id")
+		.where("albums.user_id" => params[:id], 'photos.photo_album_cover' => true)
 	end
 
 	def create

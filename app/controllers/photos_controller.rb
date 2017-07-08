@@ -38,8 +38,8 @@ class PhotosController < ApplicationController
 	    	puts im.original_filename
 	    	puts "$"*100
 			@photo = Photo.new
-			img = Paperclip.io_adapters.for(photo_params[:image])
-			img.original_filename = "#{photo_params[:original_filename]}"
+			img = Paperclip.io_adapters.for(im)
+			img.original_filename = "#{im.original_filename}"
 			@photo.image = img
 			@photo.album_id = photo_params[:album_id]
 			album_id = photo_params[:album_id]
