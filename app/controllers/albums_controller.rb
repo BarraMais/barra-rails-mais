@@ -77,16 +77,51 @@ class AlbumsController < ApplicationController
 	    # end
 	end
 
+
 	def update
-		respond_to do |format|
-			if @album.update(album_params)
-				format.html { redirect_to @album, notice: 'Album photo was successfully updated.' }
-				format.json { render :show, status: :ok, location: @album }
-			else
-				format.html { render :edit }
-				format.json { render json: @album.errors, status: :unprocessable_entity }
-			end
+		dados = []
+	    status = 'inicio'
+	    status_album = false
+	    photo_capa = false
+	    photo_message = ''
+	    album_id = ''
+	    photo = ''
+		if @album.update_attributes(:title => album_params[:title])
+
+			if album_params[:image]
+				img = Paperclip.io_adapters.for(album_params[:image])
+				img.original_filename = "#{album_params[:original_filename]}"
+                @photo = Photo.new
+                @photo.image = img
+                @photo.photo_album_cover = true
+                @photo.album_id = @album.id
+                if @photo.save
+                  puts "ok salvo"
+                  photo_capa = true
+                  photo = @photo
+                else
+                  puts "erro"
+                  photo_message = 'erro na hora de salvar a photo'
+                end
+            end
+            status = 'fim da edição'
+		    dados << {:status => status, :album => status_album, :album_id => album_id,:photo_cover => photo_capa, :photo_message => photo_message, :photo => photo}
+		    render :json => dados
+		else
+			photo_message = 'erro na hora de salvar o album'
+			dados << {:status => status, :album => status_album, :album_id => album_id,:photo_cover => photo_capa, :photo_message => photo_message, :error => @album.errors}
+		    render :json => dados
 		end
+		# respond_to do |format|
+		# 	#if @album.update(album_params)
+
+		# 		#format.html { redirect_to @album, notice: 'Album photo was successfully updated.' }
+		# 		#format.json { render :show, status: :ok, location: @album }
+		# 	else
+		# 		format.html { render :edit }
+		# 		format.json { render json: @album.errors, status: :unprocessable_entity }
+		# 	end
+		# end
 	end
 
 	# DELETE /albums/1
