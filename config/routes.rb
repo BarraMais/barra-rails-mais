@@ -208,6 +208,7 @@ Rails.application.routes.draw do
   resources :photos do
     collection do
       get 'get_album_photo/:id' => 'photos#get_album_photo'
+      post 'update_photo_album_cover' => 'photos#update_photo_album_cover'
     end
   end
 
