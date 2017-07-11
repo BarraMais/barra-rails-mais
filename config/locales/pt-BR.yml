@@ -1,0 +1,576 @@
+---
+pt-BR:
+  will_paginate:
+    previous_label: "&#8592; ANTERIOR"
+    next_label: "PRÓXIMO &#8594;"
+    page_gap: "&hellip;"
+  activerecord:
+    models:
+      plan:
+        one: Plano
+        other: Planos
+      ad:
+        one: Anúncio
+        other: Anúncios
+      category:
+        one: Categoria
+        other: Categorias
+      ad_plan:
+        one: Plano de Anúncio
+        other: Planos de Anúncio
+      administrator:
+        one: Administrador
+        other: Administradores
+      announcer:
+        one: Anunciante
+        other: Anunciantes
+      city:
+        one: Cidade
+        other: Cidades
+      columnist:
+        one: Colunista
+        other: Colunistas
+      contact:
+        one: Mensagens do site
+        other: Mensagens do site
+      country:
+        one: País
+        other: Países
+      insider:
+        one: Interno
+        other: Internos
+      personal_profile:
+        one: Perfil
+        other: Perfis
+      phonebook:
+        one: Agenda
+        other: Agendas
+      state:
+        one: Estado
+        other: Estados
+      subscriber:
+        one: Assinante
+        other: Assinantes
+      telephone:
+        one: Telefone
+        other: Telefones
+      transaction:
+        one: Transação
+        other: Transações
+      user:
+        one: Usuário
+        other: Usuários
+      gallery:
+        one: Galeria
+        other: Galerias
+      vacancy:
+        one: Vaga de Emprego
+        other: Vagas de Emprego
+      versicle:
+        one: Versículo
+        other: Versículos
+      publication:
+        one: Publicação
+        other: Publicações
+        pub_categories:
+          video: Vídeo
+          text: Texto
+          mission_diary: Diário de Missão
+          teology_talk: Conversa de Teologia
+          course: Curso
+          witness: Testemunho
+      announcer_payment:
+        one: Pagamento de Anunciante
+        other: pagamentos de Anunciante
+        payment_method:
+          credit: Cartão de Crédito
+          money: Dinheiro
+          bank_slip: Boleto
+      knowledge_area:
+        one: Área de conhecimento
+        other: Áreas de conhecimento
+      columnist_knowledge:
+        one: Área de conhecimento do Colunista
+        other: Áreas de conhecimento do Colunista
+      columnist_title:
+        one: Título do colunista
+        other: Títulos do colunista
+      pub_attachment:
+        one: Anexos da publicação
+        other: Anexos das publicações
+      curriculum:
+        one: Currículo
+        other: Currículos
+      evaluation:
+        one: Avaliação do anunciante
+        other: Avaliações dos anunciantes
+      role:
+        one: Role
+        other: Roles
+    attributes:
+      plan:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        reference: "Referência"
+        name: "Nome"
+        details: "Detalhes"
+        period: "Periodo"
+        duration_in_months: "Duração em mesês"
+        price: "Preço"
+        expire: "Expira em"
+        trial_duration: "Tempo de teste"
+        code: "Código"
+      ad:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        description: "Breve Descrição"
+        title: "Título"
+        link: "Link"
+        text_description: "Descrição completa"
+        avatar: "Imagem do anúncio"
+        start_date: "Data de início"
+        end_date: "Data final"
+        record_date: "Data do registro"
+        price: "Valor da oferta"
+        announcer: "Anunciante"
+        category: "Categoria"
+        type: "Tipo do Anúncio"
+        ad_type: "Tipo do anúncio"
+        active: "Ativo"
+        home: "Páginal Principal"
+      ad_plan:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        comercial: "Comercial"
+        name: "Nome"
+        days: "Quantidade de dias"
+        value: "Valor do anúncio"
+        start_date: "Data de início"
+        end_date: "Data final"
+        plan_type: "Tipo de plano"
+        description: "Descrição do plano"
+        announcers: "Anunciantes"
+      category:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        childs: "Sub-categorias"
+        name: "Nome"
+        father: "Superior"
+        ads: "Anúncios"
+      administrator:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        user: "Usuário"
+      announcer:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        user: "Usuário"
+        fantasy_name: "Nome Fantasia"
+        contact_name: "Nome do contato"
+        doc_type: "Tipo de documento"
+        doc: "Número do documento"
+        avatar: "Imagem"
+        name: "Nome"
+        ad_plan: "Plano de anúncio"
+        ads: "Anúncios"
+        photos: "Galeria"
+        banner: "Banner"
+        about_text: "Quem Somos"
+        gallery: 'Galeria'
+        vacancies: 'Vagas de Emprego'
+        evaluations: 'Avaliações'
+        image: "Imagem"
+        announcer: "Anunciante"
+      city:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        name: "Nome"
+        state: "Estado"
+      columnist:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        user: "Usuário"
+        periodicity: "Periodicidade dos posts"
+        admin_info: "Observações do administrador"
+        birth_date: "Data de nascimento"
+        sex: "Sexo"
+        admin_validate: "Validação do administrador"
+        avatar: "Imagem"
+        columnist_title: "Título"
+        knowledge_areas: "Áreas de conhecimento"
+      contact:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        name: "Nome"
+        email: "Email"
+        company: "Empresa"
+        phone: "Telefone"
+        message: "Mensagem"
+      country:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        name: "Nome"
+        code: "Código"
+      insider:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        user: "Usuário"
+      personal_profile:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        user: "Usuário"
+        name: "Nome"
+        street: "Rua"
+        street_number: "Número"
+        complement: "Complemento"
+        neighborhood: "Bairro"
+        city: "Cidade"
+        state: "Estado"
+        country: "País"
+        zip_code: "CEP"
+        avatar: "Imagem"
+        phonebooks: "Agendas"
+        telephones: "Telefones"
+      phonebook:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        user: "Usuário"
+        telephone: "Telefone"
+        personal_profile: "Perfil"
+      state:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        name: "Nome"
+        uf: "UF"
+        country: "País"
+      subscriber:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        user: "Usuário"
+        christian: "É Cristão?"
+        church: "Igreja"
+        birth_date: "Data de nascimento"
+        sex: "Sexo"
+        christian_denomination: "Denominação Cristã"
+        avatar: "Imagem"
+      telephone:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        user: "Usuário"
+        number: "Número"
+        phonebooks: "Agendas"
+      transaction:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        user: "Usuário"
+        plan: "Plano"
+        subscription_status: "Status da transação"
+        subscription_code: "Código da transação"
+        last_transaction_code: "Último código da transação"
+        last_transaction_status: "Último status da transação"
+        transaction_reference: "Referência da transação"
+      user:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        active: "Ativo"
+        reset_password_sent_at: "Reset de senha enviado em"
+      vacancy:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        active: "Ativo"
+        name: "Nome"
+        description: "Descrição"
+        announcer: "Anunciante"
+      versicle:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        testament: "Testamento"
+        book: "Livro"
+        chapter: "Capítulo"
+        versicle: "Versículo"
+        text: "Texto"
+        show_day: "Data"
+      publication:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        title: "Título"
+        description: "Descrição"
+        body: "Corpo"
+        pub_type: "Tipo de publicação"
+        pub_category: "Categoria"
+        knowledge_area: "Area de conhecimento"
+        image: "Imagem"
+        pub_attachments: "Anexos"
+        author: "Autor"
+      knowledge_area:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        name: "Nome"
+        columnist_knowledges: "Área de Conhecimento do Colunista"
+        columnists: "Colunistas"
+      columnist_knowledge:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        columnist: "Colunista"
+        knowledge_area: "Área de conhecimento"
+      columnist_title:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        title: "Título"
+      pub_attachment:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        file: "Anexo"
+        publication: "Publicação"
+      curriculum:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        file: "Anexo"
+        title: "Título"
+        description: "Descrição"
+        subscriber: "Assinante"
+      evaluation:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        comment: "Comentário"
+        user: "Usuário"
+        announcer: "Anunciante"
+      role:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        name: "Nome"
+        users: "Usuários"
+      gallery:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        user: "Usuário"
+        image: "Imagem"
+        announcer: "Anunciante"
+      announcer_payment:
+        announcer: Anunciante
+        ad: Anúncio
+        price: Valor
+        payment_method: Método de Pagamento
+        charge_date: Data da Cobrança
+        paid_date: Data do Recebimento
+    errors:
+      messages:
+        record_invalid: 'A validação falhou: %{errors}'
+        restrict_dependent_destroy:
+          has_one: Não é possível excluir o registro pois existe um %{record} dependente
+          has_many: Não é possível excluir o registro pois existem %{record} dependentes
+  date:
+    abbr_day_names:
+    - Dom
+    - Seg
+    - Ter
+    - Qua
+    - Qui
+    - Sex
+    - Sáb
+    abbr_month_names:
+    -
+    - Jan
+    - Fev
+    - Mar
+    - Abr
+    - Mai
+    - Jun
+    - Jul
+    - Ago
+    - Set
+    - Out
+    - Nov
+    - Dez
+    day_names:
+    - Domingo
+    - Segunda-feira
+    - Terça-feira
+    - Quarta-feira
+    - Quinta-feira
+    - Sexta-feira
+    - Sábado
+    formats:
+      default: "%d/%m/%Y"
+      long: "%d de %B de %Y"
+      short: "%d de %B"
+    month_names:
+    -
+    - Janeiro
+    - Fevereiro
+    - Março
+    - Abril
+    - Maio
+    - Junho
+    - Julho
+    - Agosto
+    - Setembro
+    - Outubro
+    - Novembro
+    - Dezembro
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: aproximadamente 1 hora
+        other: aproximadamente %{count} horas
+      about_x_months:
+        one: aproximadamente 1 mês
+        other: aproximadamente %{count} meses
+      about_x_years:
+        one: aproximadamente 1 ano
+        other: aproximadamente %{count} anos
+      almost_x_years:
+        one: quase 1 ano
+        other: quase %{count} anos
+      half_a_minute: meio minuto
+      less_than_x_minutes:
+        one: menos de um minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: mais de 1 ano
+        other: mais de %{count} anos
+      x_days:
+        one: 1 dia
+        other: "%{count} dias"
+      x_minutes:
+        one: 1 minuto
+        other: "%{count} minutos"
+      x_months:
+        one: 1 mês
+        other: "%{count} meses"
+      x_seconds:
+        one: 1 segundo
+        other: "%{count} segundos"
+    prompts:
+      day: Dia
+      hour: Hora
+      minute: Minuto
+      month: Mês
+      second: Segundo
+      year: Ano
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: deve ser aceito
+      blank: não pode ficar em branco
+      present: deve ficar em branco
+      confirmation: não é igual a %{attribute}
+      empty: não pode ficar vazio
+      equal_to: deve ser igual a %{count}
+      even: deve ser par
+      exclusion: não está disponível
+      greater_than: deve ser maior que %{count}
+      greater_than_or_equal_to: deve ser maior ou igual a %{count}
+      inclusion: não está incluído na lista
+      invalid: não é válido
+      less_than: deve ser menor que %{count}
+      less_than_or_equal_to: deve ser menor ou igual a %{count}
+      model_invalid: 'A validação falhou: %{errors}'
+      not_a_number: não é um número
+      not_an_integer: não é um número inteiro
+      odd: deve ser ímpar
+      required: deve existir
+      taken: já está em uso
+      too_long:
+        one: 'é muito longo (máximo: 1 caracter)'
+        other: 'é muito longo (máximo: %{count} caracteres)'
+      too_short:
+        one: 'é muito curto (mínimo: 1 caracter)'
+        other: 'é muito curto (mínimo: %{count} caracteres)'
+      wrong_length:
+        one: não possui o tamanho esperado (1 caracter)
+        other: não possui o tamanho esperado (%{count} caracteres)
+      other_than: deve ser diferente de %{count}
+    template:
+      body: 'Por favor, verifique o(s) seguinte(s) campo(s):'
+      header:
+        one: 'Não foi possível gravar %{model}: 1 erro'
+        other: 'Não foi possível gravar %{model}: %{count} erros'
+  helpers:
+    select:
+      prompt: Por favor selecione
+    submit:
+      create: Criar %{model}
+      submit: Salvar %{model}
+      update: Atualizar %{model}
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%u %n"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: R$
+    format:
+      delimiter: "."
+      precision: 3
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion:
+            one: bilhão
+            other: bilhões
+          million:
+            one: milhão
+            other: milhões
+          quadrillion:
+            one: quatrilhão
+            other: quatrilhões
+          thousand: mil
+          trillion:
+            one: trilhão
+            other: trilhões
+          unit: ''
+      format:
+        delimiter: ""
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: "."
+        format: "%n%"
+    precision:
+      format:
+        delimiter: "."
+  support:
+    array:
+      last_word_connector: " e "
+      two_words_connector: " e "
+      words_connector: ", "
+  time:
+    am: ''
+    formats:
+      default: "%a, %d de %B de %Y, %H:%M:%S %z"
+      long: "%d de %B de %Y, %H:%M"
+      short: "%d de %B, %H:%M"
+    pm: ''
+  unauthorized:
+    manage:
+      all: "Você não está autorizado a acessar esta página."
+      user: "Você não está permitdo a administrar as contas de outros usuários."
+    update:
+      project: "Não permitido atualizar este projeto."
