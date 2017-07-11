@@ -1,2 +1,2 @@
-json.extract! album, :id, :created_at, :updated_at
-json.url album_url(album, format: :json)
+json.extract! photo, :id, :title, :created_at, :updated_at, :album_id
+json.url asset_url(photo.image.url)
