@@ -13927,7 +13927,7 @@ body.rails_admin .table .header:after {
 
 /* line 41, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 body.rails_admin .sidebar-nav {
-  background: #273135;
+  background: #27809d;
 }
 
 /* line 45, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
@@ -13943,7 +13943,7 @@ body.rails_admin .sidebar-nav > .nav-stacked > li > a {
 /* line 55, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .links ul li a {
   color: #fff;
-  background: #273135;
+  background: #27809d;
 }
 /* line 61, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .links ul li:nth-child(1) a {
@@ -13995,37 +13995,37 @@ body.rails_admin .sidebar-nav > .nav-stacked > li > a {
 
 /* line 110, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .btn-info {
-  background: #273135;
-  border-color: #111618;
+  background: #27809d;
+  border-color: #1d5f74;
 }
 /* line 114, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .btn-info:active, .btn-info:focus, .btn-info:hover, .btn-info:target {
-  background: #37BC9B;
-  border-color: #2b957a;
-  color: #273135;
+  background: #27809d;
+  border-color: #1d5f74;
+  color: #27809d;
 }
 
 /* line 124, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .btn-info.disabled {
-  background: #3d4c52;
-  border-color: #3d4c52;
+  background: #31a1c6;
+  border-color: #31a1c6;
 }
 
 /* line 129, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .btn-primary {
-  background: #37BC9B;
-  border-color: #37BC9B;
+  background: #27809d;
+  border-color: #27809d;
 }
 /* line 133, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .btn-primary:target {
-  background: #206d5a;
-  border-color: #206d5a;
+  background: #133d4b;
+  border-color: #133d4b;
 }
 
 /* line 142, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .btn-primary.disabled {
-  background: #7fdac3;
-  border-color: #7fdac3;
+  background: #55b5d5;
+  border-color: #55b5d5;
 }
 
 /* line 147, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
@@ -14055,7 +14055,7 @@ body.rails_admin .sidebar-nav > .nav-stacked > li > a {
 
 /* line 172, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .navbar-default {
-  background: #37BC9B;
+  background: #27809d;
   border: 0;
 }
 
@@ -14070,12 +14070,12 @@ body.rails_admin .sidebar-nav > .nav-stacked > li > a {
 
 /* line 187, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .dropdown-header:hover {
-  background: #37BC9B;
+  background: #27809d;
 }
 
 /* line 191, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .dropdown-header.active {
-  background: #37BC9B;
+  background: #27809d;
 }
 
 /* line 195, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
@@ -14086,7 +14086,7 @@ a {
 /* line 197, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .navbar-default .navbar-nav > li > a:hover,
 a:hover {
-  color: #37BC9B;
+  color: #27809d;
 }
 
 /* line 203, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
@@ -14101,11 +14101,11 @@ a.navbar-brand {
   white-space: nowrap;
   color: #fff !important;
   cursor: pointer !important;
-  background: #2b957a !important;
+  background: #1d5f74 !important;
 }
 /* line 215, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 a.navbar-brand:hover {
-  background: #2b957a !important;
+  background: #1d5f74 !important;
   color: #fff !important;
 }
 
@@ -14115,7 +14115,7 @@ a.navbar-brand:hover {
 }
 /* line 224, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .page-header h1 {
-  background: #37BC9B;
+  background: #27809d;
   padding: 10px 15px;
   color: #fff;
   border-radius: 2px;
@@ -14131,7 +14131,7 @@ a.navbar-brand:hover {
 }
 /* line 239, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .content a {
-  color: #37BC9B;
+  color: #27809d;
 }
 
 /* line 244, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
@@ -14142,7 +14142,7 @@ a.navbar-brand:hover {
 /* line 248, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .nav-pills > li > a:focus,
 .nav-pills > li > a:hover {
-  color: #37BC9B !important;
+  color: #27809d !important;
 }
 
 /* line 254, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
@@ -14161,7 +14161,7 @@ a.navbar-brand:hover {
 .root_links .dashboard_root_link:hover,
 .root_links .edit_user_root_link:hover,
 .root_links li:hover {
-  background: #2b957a !important;
+  background: #1d5f74 !important;
 }
 /* line 268, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .root_links .dashboard_root_link a:hover,
@@ -14185,7 +14185,7 @@ a.navbar-brand:hover {
 
 /* line 287, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .sub-menu-container {
-  background: #1c2326;
+  background: #226f89;
 }
 /* line 290, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .sub-menu-container li a {
@@ -14193,16 +14193,16 @@ a.navbar-brand:hover {
 }
 /* line 293, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .sub-menu-container li a:hover {
-  color: #37BC9B !important;
+  color: #27809d !important;
 }
 /* line 298, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .sub-menu-container li.active a {
-  background: #111618;
-  color: #37BC9B !important;
+  background: #1d5f74;
+  color: #27809d !important;
 }
 /* line 302, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .sub-menu-container li.active a:hover {
-  color: #37BC9B !important;
+  color: #27809d !important;
 }
 
 /* line 308, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
@@ -14223,7 +14223,7 @@ h1 {
 
 /* line 321, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .fieldset a {
-  color: #37BC9B !important;
+  color: #27809d !important;
 }
 
 /* line 325, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
@@ -14231,12 +14231,12 @@ h1 {
   text-decoration: none !important;
   padding: 8px 10px;
   border-radius: 2px;
-  color: #37BC9B;
+  color: #27809d;
 }
 /* line 331, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .table-striped td:not(.image_field) a:hover {
-  background: #37BC9B;
-  color: #273135;
+  background: #27809d;
+  color: #27809d;
 }
 
 /* line 337, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
@@ -14266,7 +14266,7 @@ body.rails_admin .table td {
 
 /* line 359, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .row-highlight td {
-  background: rgba(55, 188, 155, 0.1) !important;
+  background: rgba(39, 128, 157, 0.1) !important;
 }
 
 /* line 363, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
@@ -14282,7 +14282,7 @@ body.rails_admin .table td {
 /* line 372, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .table-striped {
   border: 1px solid #ddd;
-  border-top: 4px solid #37BC9B;
+  border-top: 4px solid #27809d;
 }
 
 /* line 377, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
@@ -14366,7 +14366,7 @@ td.carrierwave_type .img-thumbnail {
 /* line 443, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .sortable-container {
   width: 100%;
-  background: #44c8a8;
+  background: #2c91b1;
   margin-bottom: 15px;
 }
 
@@ -14379,17 +14379,17 @@ td.carrierwave_type .img-thumbnail {
 
 /* line 455, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .li_sortable_label {
-  background: #44c8a8;
-  color: #273135;
+  background: #2c91b1;
+  color: #27809d;
   padding: 10px 15px;
 }
 
 /* line 461, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
 .ref_number {
-  color: #37BC9B;
-  background: #273135;
+  color: #27809d;
+  background: #27809d;
   padding: 10px 15px;
-  border-left: 2px solid #206d5a;
+  border-left: 2px solid #133d4b;
 }
 
 /* line 468, /home/vortex/.rvm/gems/ruby-2.3.0@barramais/gems/rails_admin_rollincode-1.2.1/vendor/assets/stylesheets/rails_admin/themes/rollincode/theming.scss */
