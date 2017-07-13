@@ -35,7 +35,7 @@ class PhotosController < ApplicationController
 
 	    params[:photo][:images].each do |im|
 	    	puts "$"*100
-	    	puts im['filename']
+	    	puts " filename = #{im['filename']}"
 	    	#puts im.filename
 	    	puts "$"*100
 			@photo = Photo.new
