@@ -6,6 +6,7 @@
 
     <%= javascript_include_tag 'application.js', debug: true %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag    'barramais', media: 'all' %>
     <%= favicon_link_tag('') %>
   </head>
 
@@ -14,6 +15,5 @@
     <p class="alert"><%= alert %></p>
 
     <%= yield %>
-    <%= link_to "Logout", destroy_user_session_path, {method: :delete} %>
   </body>
 </html>

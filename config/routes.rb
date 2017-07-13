@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'barrachat/index'
 
   devise_for :users, controllers: {
@@ -8,7 +9,7 @@ Rails.application.routes.draw do
     omniauth_callbacks: "user/omniauth_callbacks"
   }
 
-  root to: 'users#index'
+  root to: 'rails_admin/main#dashboard'
 
   resources :users do
     collection do
