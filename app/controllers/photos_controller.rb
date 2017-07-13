@@ -84,11 +84,12 @@ class PhotosController < ApplicationController
 	# DELETE /photos/1
 	# DELETE /photos/1.json
 	def destroy
-		@photo.destroy
-			respond_to do |format|
-			format.html { redirect_to photos_url, notice: 'Photo was successfully destroyed.' }
-			format.json { head :no_content }
-		end
+		if @photo.destroy
+            message = "photo deletado com sucesso"
+        else
+            message = "problema para deletar photo >> photo.id = #{@photo.id}"
+        end
+        render :json => message
 	end
 
 	def update_photo_album_cover

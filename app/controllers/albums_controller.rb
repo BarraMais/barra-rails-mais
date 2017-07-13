@@ -128,11 +128,16 @@ class AlbumsController < ApplicationController
 	# DELETE /albums/1
 	# DELETE /albums/1.json
 	def destroy
-		@album.destroy
-		respond_to do |format|
-			format.html { redirect_to albums_url, notice: 'Album was successfully destroyed.' }
-			format.json { head :no_content }
-		end
+		if @album.destroy
+            message = "album deletado com sucesso"
+        else
+            message = "problema para deletar album >> album.id = #{@album.id}"
+        end
+        render :json => message
+		# respond_to do |format|
+		# 	format.html { redirect_to albums_url, notice: 'Album was successfully destroyed.' }
+		# 	format.json { head :no_content }
+		# end
 	end
 
 	private
