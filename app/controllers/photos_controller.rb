@@ -35,12 +35,12 @@ class PhotosController < ApplicationController
 
 	    params[:photo][:images].each do |im|
 	    	puts "$"*100
-	    	puts im['original_filename']
+	    	puts im['filename']
 	    	#puts im.filename
 	    	puts "$"*100
 			@photo = Photo.new
 			img = Paperclip.io_adapters.for(im['image'])
-			img.original_filename = "#{im['original_filename']}"
+			img.original_filename = "#{im['filename']}"
 			# img = Paperclip.io_adapters.for(im.url)
 			# img.original_filename = "#{im.filename}"
 			@photo.image = img
