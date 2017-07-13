@@ -84,12 +84,16 @@ class PhotosController < ApplicationController
 	# DELETE /photos/1
 	# DELETE /photos/1.json
 	def destroy
+		dados = []
 		if @photo.destroy
             message = "photo deletado com sucesso"
+            status = "ok"
         else
             message = "problema para deletar photo >> photo.id = #{@photo.id}"
+            status = "não deletado"
         end
-        render :json => message
+        dados << {:status => status, :message => message}
+        render :json => dados
 	end
 
 	def update_photo_album_cover
