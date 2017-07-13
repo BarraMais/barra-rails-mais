@@ -33,16 +33,16 @@ class PhotosController < ApplicationController
 		count_image_not_save = 0
 		album_id = ''
 
-	    params[:photo][:image].each do |im|
+	    params[:photo][:images].each do |im|
 	    	puts "$"*100
-	    	#puts im.original_filename
-	    	puts im.filename
+	    	puts im.original_filename
+	    	#puts im.filename
 	    	puts "$"*100
 			@photo = Photo.new
-			# img = Paperclip.io_adapters.for(im)
-			# img.original_filename = "#{im.original_filename}"
-			img = Paperclip.io_adapters.for(im.url)
-			img.original_filename = "#{im.filename}"
+			img = Paperclip.io_adapters.for(im)
+			img.original_filename = "#{im.original_filename}"
+			# img = Paperclip.io_adapters.for(im.url)
+			# img.original_filename = "#{im.filename}"
 			@photo.image = img
 			@photo.album_id = photo_params[:album_id]
 			album_id = photo_params[:album_id]
@@ -130,7 +130,7 @@ class PhotosController < ApplicationController
 
 		def photo_params
 	      params.require(:photo).permit(
-	        :image,
+	        :images,
 	        :filename,
         	:album_id
 	      )
