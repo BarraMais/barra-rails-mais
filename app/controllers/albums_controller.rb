@@ -24,6 +24,11 @@ class AlbumsController < ApplicationController
 		@photos = Photo.select("albums.*, photos.*")
 		.joins("left join albums on albums.id = photos.album_id")
 		.where("albums.user_id" => params[:id], 'photos.photo_album_cover' => true)
+
+		@photos.each do |photo|
+			photo.id = photo.album_id
+		end
+
 	end
 
 	def create
