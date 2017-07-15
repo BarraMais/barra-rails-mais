@@ -33,13 +33,16 @@ class PhotosController < ApplicationController
 		count_image_not_save = 0
 		album_id = ''
 
-	    params[:photo][:image].each do |im|
+	    params[:photo][:images].each do |im|
 	    	puts "$"*100
-	    	puts im.original_filename
+	    	puts " original_filename = #{im['original_filename']}"
+	    	#puts im.filename
 	    	puts "$"*100
 			@photo = Photo.new
-			img = Paperclip.io_adapters.for(im)
-			img.original_filename = "#{im.original_filename}"
+			img = Paperclip.io_adapters.for(im['image'])
+			img.original_filename = "#{im['original_filename']}"
+			# img = Paperclip.io_adapters.for(im.url)
+			# img.original_filename = "#{im.filename}"
 			@photo.image = img
 			@photo.album_id = photo_params[:album_id]
 			album_id = photo_params[:album_id]
@@ -81,11 +84,16 @@ class PhotosController < ApplicationController
 	# DELETE /photos/1
 	# DELETE /photos/1.json
 	def destroy
-		@photo.destroy
-			respond_to do |format|
-			format.html { redirect_to photos_url, notice: 'Photo was successfully destroyed.' }
-			format.json { head :no_content }
-		end
+		dados = []
+		if @photo.destroy
+            message = "photo deletado com sucesso"
+            status = "ok"
+        else
+            message = "problema para deletar photo >> photo.id = #{@photo.id}"
+            status = "não deletado"
+        end
+        dados << {:status => status, :message => message}
+        render :json => dados
 	end
 
 	def update_photo_album_cover
@@ -127,7 +135,7 @@ class PhotosController < ApplicationController
 
 		def photo_params
 	      params.require(:photo).permit(
-	        :image,
+	        :images,
 	        :filename,
         	:album_id
 	      )

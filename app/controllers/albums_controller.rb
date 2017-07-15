@@ -24,6 +24,11 @@ class AlbumsController < ApplicationController
 		@photos = Photo.select("albums.*, photos.*")
 		.joins("left join albums on albums.id = photos.album_id")
 		.where("albums.user_id" => params[:id], 'photos.photo_album_cover' => true)
+
+		@photos.each do |photo|
+			photo.id = photo.album_id
+		end
+
 	end
 
 	def create
@@ -128,11 +133,20 @@ class AlbumsController < ApplicationController
 	# DELETE /albums/1
 	# DELETE /albums/1.json
 	def destroy
-		@album.destroy
-		respond_to do |format|
-			format.html { redirect_to albums_url, notice: 'Album was successfully destroyed.' }
-			format.json { head :no_content }
-		end
+        dados = []
+		if @album.destroy
+            message = "album deletado com sucesso"
+            status = "ok"
+        else
+            message = "problema para deletar album >> album.id = #{@album.id}"
+            status = "não deletado"
+        end
+        dados << {:status => status, :message => message}
+        render :json => dados
+		# respond_to do |format|
+		# 	format.html { redirect_to albums_url, notice: 'Album was successfully destroyed.' }
+		# 	format.json { head :no_content }
+		# end
 	end
 
 	private
