@@ -9,7 +9,9 @@ Rails.application.routes.draw do
     omniauth_callbacks: "user/omniauth_callbacks"
   }
 
-  root to: 'rails_admin/main#dashboard'
+  root to: 'pages#home'
+
+  get 'pages/home'
 
   resources :users do
     collection do

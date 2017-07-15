@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  rolify
   # TARGET FOR NOTIFICATIONS
   acts_as_target
 

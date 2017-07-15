@@ -58,8 +58,12 @@ gem 'acts_as_commentable_with_threading'
 gem 'aws-sdk'
 gem 'active_record_union'
 gem 'activity_notification'
+
+# Painel admin
 gem 'rails_admin', '~> 1.2'
 gem 'rails_admin_rollincode', '~> 1.0'
+gem 'cancancan'
+gem 'rolify'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to

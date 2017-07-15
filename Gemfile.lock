@@ -79,6 +79,7 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.3)
     byebug (9.0.6)
+    cancancan (2.0.0)
     case_transform (0.2)
       activesupport
     climate_control (0.1.0)
@@ -281,6 +282,7 @@ GEM
     remotipart (1.3.1)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
+    rolify (5.1.0)
     rspec-core (3.5.4)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
@@ -382,6 +384,7 @@ DEPENDENCIES
   aws-sdk
   bootstrap-sass (~> 3.3.6)
   byebug
+  cancancan
   coffee-rails (~> 4.2)
   devise
   devise-i18n
@@ -404,6 +407,7 @@ DEPENDENCIES
   rails_admin (~> 1.2)
   rails_admin_rollincode (~> 1.0)
   redis (~> 3.0)
+  rolify
   rspec-rails (~> 3.5)
   rubocop (~> 0.47.0)
   sass-rails (~> 5.0)

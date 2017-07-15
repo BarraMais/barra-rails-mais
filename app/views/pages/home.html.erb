@@ -1,0 +1,9 @@
+<div class="login-page">
+  <h3>Acesso ao painel de Administração da Barramais</h3>
+
+  <% if user_signed_in? %>
+    <%= link_to "SAIR E ENTRAR COM OUTRO USUÁRIO", destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to "ENTRAR", rails_admin_path %>
+  <% end %>
+</div>

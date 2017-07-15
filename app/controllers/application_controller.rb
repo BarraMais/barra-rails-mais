@@ -1,11 +1,27 @@
 class ApplicationController < ActionController::Base
-#  protect_from_forgery with: :exception
+  protect_from_forgery with: :exception
 
-  protect_from_forgery with: :null_session
+  # protect_from_forgery with: :null_session
   before_action :verified_request?
   before_action :configure_permitted_parameters, if: :devise_controller?
   respond_to :html, :json
   before_action :authenticate_user!, only: [:devise_token]
+
+  include CanCan::ControllerAdditions
+
+  rescue_from CanCan::AccessDenied do |exception|
+    respond_to do |format|
+      format.json { head :forbidden }
+      format.html { redirect_to main_app.root_url, :notice => exception.message }
+    end
+  end
+
+  def authenticate_admin
+    authenticate_user!
+    unless(current_user.has_role?(:administrator))
+      redirect_to root_path, notice: current_user.first_name + ', você não está autorizado a acessar esta página, deslogue e entre com um usuário administrador.'
+    end
+  end
 
   def devise_token
     raw, enc = Devise.token_generator.generate(current_user.class, :reset_password_token)
