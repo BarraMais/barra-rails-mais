@@ -6,107 +6,150 @@ pt-BR:
     page_gap: "&hellip;"
   activerecord:
     models:
-      plan:
-        one: Plano
-        other: Planos
+      accessory:
+        one: Acessório
+        other: Acessórios
+      ad_interest:
+        one: Interesse do anúncio
+        other: Interesses dos anúncios
+      address:
+        one: Endereço
+        other: Endereços
+      advertiser:
+        one: Anunciante
+        other: Anunciantes
+      album:
+        one: Album
+        other: Albuns
+      album_photo:
+        one: Foto do Album
+        other: Fotos do ALbum
       ad:
         one: Anúncio
         other: Anúncios
-      category:
-        one: Categoria
-        other: Categorias
-      ad_plan:
-        one: Plano de Anúncio
-        other: Planos de Anúncio
-      administrator:
-        one: Administrador
-        other: Administradores
-      announcer:
-        one: Anunciante
-        other: Anunciantes
+      area:
+        one: Area
+        other: Areas
+      brand:
+        one: Marca
+        other: Marcas
       city:
         one: Cidade
         other: Cidades
-      columnist:
-        one: Colunista
-        other: Colunistas
-      contact:
-        one: Mensagens do site
-        other: Mensagens do site
-      country:
-        one: País
-        other: Países
-      insider:
-        one: Interno
-        other: Internos
-      personal_profile:
-        one: Perfil
-        other: Perfis
-      phonebook:
-        one: Agenda
-        other: Agendas
+      classified:
+        one: Classificado
+        other: Classificados
+      comment:
+        one: Comentário
+        other: Comentários
+      conversation:
+        one: Conversa
+        other: Conversas
+      country_for_travel:
+        one: País (Viagens)
+        other: Países (Viagens)
       state:
         one: Estado
         other: Estados
-      subscriber:
-        one: Assinante
-        other: Assinantes
-      telephone:
-        one: Telefone
-        other: Telefones
+      event:
+        one: Evento
+        other: Eventos
+      event_guest:
+        one: Convidado (Eventos)
+        other: Convidados (Eventos)
+      fishing:
+        one: Pesca
+        other: Pescas
+      fishing_category:
+        one: Categoria de Pesca
+        other: Categorias de Pesca
+      fishing_sub_category:
+        one: Sub-categoria de Pesca
+        other: Sub-categorias de Pesca
+      friendship:
+        one: Amizade
+        other: Amizades
+      group:
+        one: Grupo
+        other: Grupos
+      group_member:
+        one: Membro (Grupo)
+        other: Membros (Grupo)
+      interest:
+        one: Interesse
+        other: Interesses
+      interest_area:
+        one: Área de interesse
+        other: Áreas de interesse
+      message:
+        one: Mensagem
+        other: Mensagens
+      mold:
+        one: Modelo de Embarcação
+        other: Modelos de Embarcação
+      nautical_sport:
+        one: Esporte Náutico
+        other: Esportes Náuticos
+      own_vessel:
+        one: Embarcação do Usuário
+        other: Embarcações dos Usuários
+      country:
+        one: País
+        other: Países
+      photo:
+        one: Foto
+        other: Fotos
+      post:
+        one: Postagem
+        other: Postagens
+      post_image:
+        one: Imagem da postagem
+        other: Imagens das postagens
+      product:
+        one: Produto
+        other: Produtos
+      product_category:
+        one: Categoria de Produto
+        other: Categorias dos produtos
+      product_sub_category:
+        one: Sub-categoria de produto(1)
+        other: Sub-categorias de produto(1)
+      product_sub_category2:
+        one: Sub-categoria de produto(2)
+        other: Sub-categorias de produto(2)
+      role:
+        one: Função
+        other: Funções
+      state_for_travel:
+        one: Estado(Viagens)
+        other: Estados(Viagens)
       transaction:
         one: Transação
         other: Transações
+      traveled_country:
+        one: País viajado
+        other: Países viajados
+      traveled_state:
+        one: Estado viajado
+        other: Estados viajados
+      user_interest:
+        one: Interesse do usuário
+        other: Interesses dos usuários
+      user_nautical_sport:
+        one: Esporte náutico por usuário
+        other: Esportes náuiticos pos usuários
       user:
         one: Usuário
         other: Usuários
-      gallery:
-        one: Galeria
-        other: Galerias
-      vacancy:
-        one: Vaga de Emprego
-        other: Vagas de Emprego
-      versicle:
-        one: Versículo
-        other: Versículos
-      publication:
-        one: Publicação
-        other: Publicações
-        pub_categories:
-          video: Vídeo
-          text: Texto
-          mission_diary: Diário de Missão
-          teology_talk: Conversa de Teologia
-          course: Curso
-          witness: Testemunho
-      announcer_payment:
-        one: Pagamento de Anunciante
-        other: pagamentos de Anunciante
-        payment_method:
-          credit: Cartão de Crédito
-          money: Dinheiro
-          bank_slip: Boleto
-      knowledge_area:
-        one: Área de conhecimento
-        other: Áreas de conhecimento
-      columnist_knowledge:
-        one: Área de conhecimento do Colunista
-        other: Áreas de conhecimento do Colunista
-      columnist_title:
-        one: Título do colunista
-        other: Títulos do colunista
-      pub_attachment:
-        one: Anexos da publicação
-        other: Anexos das publicações
-      curriculum:
-        one: Currículo
-        other: Currículos
-      evaluation:
-        one: Avaliação do anunciante
-        other: Avaliações dos anunciantes
-      role:
-        one: Role
-        other: Roles
+      vessel:
+        one: Embarcação
+        other: Embarcações
+      vessel_accessory:
+        one: Acessório de embarcação
+        other: Acessórios de embarcações
+      vessel_type:
+        one: Tipo de embarcação
+        other: Tipos de embarcações
     attributes:
       plan:
         created_at: "Criado em"
