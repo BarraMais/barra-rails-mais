@@ -1,6 +1,6 @@
 class AlbumsController < ApplicationController
-	before_action :set_album, only: [:show, :edit, :update, :destroy]
-	before_action :authenticate_user!, only: [:create]
+	before_action :set_album, only: [:show, :edit, :update]
+	before_action :authenticate_user!, only: [:create, :destroy ]
 
 	def index
 	   @albums = Album.all
