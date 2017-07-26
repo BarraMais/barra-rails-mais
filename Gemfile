@@ -59,6 +59,10 @@ gem 'aws-sdk'
 gem 'active_record_union'
 gem 'activity_notification'
 
+# Tags Profile
+gem 'acts-as-taggable-on', '~> 4.0'
+gem 'rails_admin_tag_list'
+
 # Painel admin
 gem 'rails_admin', '~> 1.2'
 gem 'rails_admin_rollincode', '~> 1.0'
