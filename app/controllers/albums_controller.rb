@@ -95,8 +95,8 @@ class AlbumsController < ApplicationController
 		if @album.update_attributes(:title => album_params[:title])
 			album_id = @album.id
 			status_album = true
-			if album_params[:image]
-				img = Paperclip.io_adapters.for(album_params[:image])
+			if album_params[:img]
+				img = Paperclip.io_adapters.for(album_params[:img])
 				img.original_filename = "#{album_params[:original_filename]}"
                 @photo = Photo.new
                 @photo.image = img
@@ -160,7 +160,8 @@ class AlbumsController < ApplicationController
 	      params.require(:album).permit(
 	        :title,
 	        :image,
-	        :filename
+	        :filename,
+            :img
 	      )
 	    end
 end
