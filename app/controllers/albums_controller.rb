@@ -98,6 +98,13 @@ class AlbumsController < ApplicationController
 			if album_params[:img]
 				img = Paperclip.io_adapters.for(album_params[:img])
 				img.original_filename = "#{album_params[:original_filename]}"
+
+                #deletando photo de capa
+                #photo_delete = Photo.where(album_id: @album.id)
+                #photo_delete.delete_all
+
+                Photo.destroy_all(album_id: @album.id, photo_album_cover: true)
+
                 @photo = Photo.new
                 @photo.image = img
                 @photo.photo_album_cover = true
