@@ -1,5 +1,9 @@
 class User < ApplicationRecord
   rolify
+
+  acts_as_taggable_on :sports, :vessels
+
+
   # TARGET FOR NOTIFICATIONS
   acts_as_target
 
@@ -283,6 +287,8 @@ class User < ApplicationRecord
     user_h.merge!({nautical_license_name: nautical_license.to_s.humanize})
     user_h.merge!({naval_service_patent_name: naval_service_patent.to_s.humanize})
     user_h.merge!({relationship_name: relationship.to_s.humanize})
+    user_h.merge!({sport_list: sport_list})
+    user_h.merge!({vessel_list: vessel_list})
     own_vessels_hash = own_vessels.reload.map do |own_vessel|
       {id: own_vessel.vessel_type.id}.merge!({vessel_type_name: own_vessel.vessel_type.name, vessel_type_photo_url: own_vessel.vessel_type.photo.url})
     end

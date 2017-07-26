@@ -378,7 +378,9 @@ class UsersController < ApplicationController
       :fishing_tourist,
       :tourist_places,
       :water_sportsman,
-      :fishing_type
+      :fishing_type,
+      :sport_list,
+      :vessel_list
     )
   end
 

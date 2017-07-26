@@ -50,6 +50,8 @@ GEM
       i18n (>= 0.5.0)
       jquery-rails (>= 3.1.1)
       railties (>= 4.2.0, < 5.1)
+    acts-as-taggable-on (4.0.0)
+      activerecord (>= 4.0)
     acts_as_commentable_with_threading (2.0.1)
       activerecord (>= 4.0)
       activesupport (>= 4.0)
@@ -266,6 +268,8 @@ GEM
       sass-rails (>= 4.0, < 6)
     rails_admin_rollincode (1.2.1)
       rails (>= 4.0, < 6)
+    rails_admin_tag_list (0.2.0)
+      rails_admin (>= 0.6)
     railties (5.0.2)
       actionpack (= 5.0.2)
       activesupport (= 5.0.2)
@@ -378,6 +382,7 @@ DEPENDENCIES
   active_model_serializers
   active_record_union
   activity_notification
+  acts-as-taggable-on (~> 4.0)
   acts_as_commentable_with_threading
   acts_as_votable
   awesome_print
@@ -406,6 +411,7 @@ DEPENDENCIES
   rails-i18n (~> 5.0.0)
   rails_admin (~> 1.2)
   rails_admin_rollincode (~> 1.0)
+  rails_admin_tag_list
   redis (~> 3.0)
   rolify
   rspec-rails (~> 3.5)

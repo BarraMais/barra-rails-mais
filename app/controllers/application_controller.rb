@@ -86,7 +86,9 @@ class ApplicationController < ActionController::Base
         :fishing_tourist,
         :tourist_places,
         :water_sportsman,
-        :fishing_type
+        :fishing_type,
+        :sport_list,
+        :vessel_list
       ])
     devise_parameter_sanitizer.permit(:account_update, keys: [
         :first_name,
@@ -129,7 +131,9 @@ class ApplicationController < ActionController::Base
         :fishing_tourist,
         :tourist_places,
         :water_sportsman,
-        :fishing_type
+        :fishing_type,
+        :sport_list,
+        :vessel_list
       ])
   end
 end
