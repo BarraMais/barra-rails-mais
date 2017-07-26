@@ -22,7 +22,7 @@ class PhotosController < ApplicationController
 	end
 	# GET with conditional
 	def get_album_photo
-		@photos = Photo.where(album_id: params[:id])
+		@photos = Photo.where(album_id: params[:id], photo_album_cover: false)
 	end
 
 	def create
