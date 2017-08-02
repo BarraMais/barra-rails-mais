@@ -24,9 +24,9 @@ default: &default
 local: &local
 
   # username: arthur
-  #username: vortex
-   username: postgres
-   password: postgres
+  username: vortex
+  #  username: postgres
+  #  password: postgres
 
 development:
   <<: *default
